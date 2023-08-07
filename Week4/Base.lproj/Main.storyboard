@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mt2-GI-Siq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="je0-Y0-bfT">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -68,13 +68,80 @@
                     <view key="view" contentMode="scaleToFill" id="p9s-1q-WxN">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="맥주 이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvw-m4-Arl">
+                                <rect key="frame" x="150.66666666666666" y="79" width="92" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="z5b-O1-sb0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iBh-5I-DbL">
+                                <rect key="frame" x="96.666666666666686" y="189" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="NMH-jR-guy"/>
+                                    <constraint firstAttribute="width" secondItem="iBh-5I-DbL" secondAttribute="height" multiplier="1:1" id="lFr-lz-FAj"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tegline 검색해보니 슬로건 같음" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oyc-sH-3Du">
+                                <rect key="frame" x="20" y="139" width="353" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="aVd-qy-Xwj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description 긴거보니 설명같음" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3yL-nb-dZQ">
+                                <rect key="frame" x="20" y="449" width="353" height="329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z5c-b0-6AT">
+                                <rect key="frame" x="159" y="399" width="75" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Gad-dk-sNM"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="beerButtonTapped:" destination="je0-Y0-bfT" eventType="touchUpInside" id="hP3-id-f79"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="dcb-3D-CbW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Oyc-sH-3Du" firstAttribute="leading" secondItem="dcb-3D-CbW" secondAttribute="leading" constant="20" id="0gY-jA-aJi"/>
+                            <constraint firstItem="Z5c-b0-6AT" firstAttribute="top" secondItem="iBh-5I-DbL" secondAttribute="bottom" constant="10" id="Hn1-s5-gS8"/>
+                            <constraint firstItem="dcb-3D-CbW" firstAttribute="trailing" secondItem="3yL-nb-dZQ" secondAttribute="trailing" constant="20" id="JLz-Vs-sT2"/>
+                            <constraint firstItem="3yL-nb-dZQ" firstAttribute="leading" secondItem="dcb-3D-CbW" secondAttribute="leading" constant="20" id="Lgv-ep-VDk"/>
+                            <constraint firstItem="bvw-m4-Arl" firstAttribute="top" secondItem="dcb-3D-CbW" secondAttribute="top" constant="20" id="NT6-Da-p62"/>
+                            <constraint firstItem="Oyc-sH-3Du" firstAttribute="centerX" secondItem="p9s-1q-WxN" secondAttribute="centerX" id="bNJ-gK-kN4"/>
+                            <constraint firstItem="bvw-m4-Arl" firstAttribute="centerX" secondItem="p9s-1q-WxN" secondAttribute="centerX" id="eCu-Fa-3Su"/>
+                            <constraint firstItem="dcb-3D-CbW" firstAttribute="trailing" secondItem="Oyc-sH-3Du" secondAttribute="trailing" constant="20" id="ffu-FB-Jrc"/>
+                            <constraint firstItem="iBh-5I-DbL" firstAttribute="top" secondItem="Oyc-sH-3Du" secondAttribute="bottom" constant="20" id="gkL-M8-q4a"/>
+                            <constraint firstItem="Z5c-b0-6AT" firstAttribute="centerX" secondItem="p9s-1q-WxN" secondAttribute="centerX" id="je5-ZS-6GH"/>
+                            <constraint firstItem="iBh-5I-DbL" firstAttribute="centerX" secondItem="p9s-1q-WxN" secondAttribute="centerX" id="laE-6T-uys"/>
+                            <constraint firstItem="3yL-nb-dZQ" firstAttribute="top" secondItem="Z5c-b0-6AT" secondAttribute="bottom" constant="10" id="ly8-iB-ybz"/>
+                            <constraint firstItem="Oyc-sH-3Du" firstAttribute="top" secondItem="bvw-m4-Arl" secondAttribute="bottom" constant="20" id="uXK-ZL-kRO"/>
+                            <constraint firstItem="dcb-3D-CbW" firstAttribute="bottom" secondItem="3yL-nb-dZQ" secondAttribute="bottom" constant="40" id="utv-mt-gWt"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="beerButton" destination="Z5c-b0-6AT" id="wmq-dk-Ln5"/>
+                        <outlet property="beerDesctiptionLabel" destination="3yL-nb-dZQ" id="97I-KJ-DW4"/>
+                        <outlet property="beerImageView" destination="iBh-5I-DbL" id="dCm-3c-cpl"/>
+                        <outlet property="beerTegLineLabel" destination="Oyc-sH-3Du" id="fyT-Sv-3EG"/>
+                        <outlet property="beerTitleLabel" destination="bvw-m4-Arl" id="BKd-Dy-eEt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="er5-x6-ELm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1976" y="-18"/>
+            <point key="canvasLocation" x="1974.8091603053435" y="-18.30985915492958"/>
         </scene>
     </scenes>
     <resources>
