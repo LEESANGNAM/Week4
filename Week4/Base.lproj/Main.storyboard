@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bBb-zT-y7J">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="S6s-a4-vTD">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -76,7 +76,36 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="-34"/>
+            <point key="canvasLocation" x="1057.2519083969464" y="-34.507042253521128"/>
+        </scene>
+        <!--Beer Table View Controller-->
+        <scene sceneID="kpn-UJ-cS2">
+            <objects>
+                <tableViewController storyboardIdentifier="BeerTableViewController" id="Hyj-hw-bb4" customClass="BeerTableViewController" customModule="Week4" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Etf-1n-QpE">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="BeerTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BeerTableViewCell" id="E0I-9p-ec5" customClass="BeerTableViewCell" customModule="Week4" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="E0I-9p-ec5" id="ZO9-JK-d2z">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Hyj-hw-bb4" id="Jcp-cU-5k6"/>
+                            <outlet property="delegate" destination="Hyj-hw-bb4" id="CDc-jH-tMf"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="6W7-CX-3Hj"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o0O-Zo-GT1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1364" y="450"/>
         </scene>
         <!--Weather View Controller-->
         <scene sceneID="adH-l7-v3N">
@@ -119,7 +148,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xsC-bV-qT3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="127.48091603053435" y="609.85915492957747"/>
+            <point key="canvasLocation" x="1054.1984732824426" y="609.85915492957747"/>
         </scene>
         <!--Video View Controller-->
         <scene sceneID="apU-YO-dZn">
@@ -172,12 +201,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k3h-v7-QQd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1165.6488549618321" y="-18.30985915492958"/>
+            <point key="canvasLocation" x="131" y="-769"/>
         </scene>
-        <!--Beer View Controller-->
+        <!--Beer Random View Controller-->
         <scene sceneID="Bwq-Yl-kde">
             <objects>
-                <viewController storyboardIdentifier="BeerViewController" id="je0-Y0-bfT" customClass="BeerViewController" customModule="Week4" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BeerRandomViewController" id="je0-Y0-bfT" customClass="BeerRandomViewController" customModule="Week4" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p9s-1q-WxN">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -254,7 +283,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="er5-x6-ELm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1974.8091603053435" y="-18.30985915492958"/>
+            <point key="canvasLocation" x="-1364" y="1142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TN8-oT-IB3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="S6s-a4-vTD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MGw-Ns-HwH">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Hyj-hw-bb4" kind="relationship" relationship="rootViewController" id="Hdt-NO-kyj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GCC-Bm-4d1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1364" y="-324"/>
         </scene>
     </scenes>
     <resources>

@@ -10,7 +10,7 @@ import Alamofire
 import SwiftyJSON
 import Kingfisher
 
-class BeerViewController: UIViewController {
+class BeerRandomViewController: UIViewController {
 
     @IBOutlet weak var beerTitleLabel: UILabel!
     
@@ -37,7 +37,7 @@ class BeerViewController: UIViewController {
     
     
     func callRequest(){
-        let url = APIKey.beerURL
+        let url = APIKey.beerRandomURL
         AF.request(url, method: .get).validate().responseJSON { response in
             switch response.result {
             case .success(let value):
