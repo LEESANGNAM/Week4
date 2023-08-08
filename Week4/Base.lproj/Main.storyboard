@@ -121,10 +121,10 @@
             </objects>
             <point key="canvasLocation" x="127.48091603053435" y="609.85915492957747"/>
         </scene>
-        <!--View Controller-->
+        <!--Video View Controller-->
         <scene sceneID="apU-YO-dZn">
             <objects>
-                <viewController id="bBb-zT-y7J" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VideoViewController" id="bBb-zT-y7J" customClass="VideoViewController" customModule="Week4" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eom-o2-k2d">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
