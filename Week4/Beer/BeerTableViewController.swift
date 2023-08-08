@@ -20,6 +20,7 @@ class BeerTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // xib 로 테이블뷰 셀을 생성할 경우, 테이블뷰에 사용할 셀을 등록해주는 과정이 필요!
+        setUpNavigationBar()
         setUpTableView()
         callRequest()
     }
@@ -41,6 +42,18 @@ class BeerTableViewController: UITableViewController {
         cell.setUpCell(beer: beer)
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "beerDetailViewController") as! beerDetailViewController
+        vc.beer = beerList[indexPath.row]
+        
+        navigationController?.pushViewController(vc, animated: true)
+        
+        
+        
+    }
+    
+    
 
 }
 
@@ -70,6 +83,20 @@ extension BeerTableViewController {
                 print(error)
             }
         }
+    }
+    
+    func setUpNavigationBar(){
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "랜덤추천", style: .plain, target: self, action: #selector(randomBeer))
+        title = "맥주리스트"
+        navigationController?.navigationBar.barTintColor = .blue
+        navigationController?.navigationBar.tintColor = .black
+    }
+    
+    
+    @objc func randomBeer(){
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "BeerRandomViewController") as? BeerRandomViewController else { return }
+        
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     

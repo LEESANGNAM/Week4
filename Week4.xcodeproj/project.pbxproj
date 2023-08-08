@@ -15,6 +15,7 @@
 		D69AB5112A825619007B210C /* BeerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69AB5102A825619007B210C /* BeerTableViewController.swift */; };
 		D69AB5142A82564A007B210C /* BeerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69AB5122A82564A007B210C /* BeerTableViewCell.swift */; };
 		D69AB5152A82564A007B210C /* BeerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D69AB5132A82564A007B210C /* BeerTableViewCell.xib */; };
+		D69AB5172A82999B007B210C /* beerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69AB5162A82999B007B210C /* beerDetailViewController.swift */; };
 		D6B63E2D2A80966E006377A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B63E2C2A80966E006377A1 /* AppDelegate.swift */; };
 		D6B63E2F2A80966E006377A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B63E2E2A80966E006377A1 /* SceneDelegate.swift */; };
 		D6B63E312A80966E006377A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B63E302A80966E006377A1 /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 		D69AB5102A825619007B210C /* BeerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerTableViewController.swift; sourceTree = "<group>"; };
 		D69AB5122A82564A007B210C /* BeerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerTableViewCell.swift; sourceTree = "<group>"; };
 		D69AB5132A82564A007B210C /* BeerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeerTableViewCell.xib; sourceTree = "<group>"; };
+		D69AB5162A82999B007B210C /* beerDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beerDetailViewController.swift; sourceTree = "<group>"; };
 		D6B63E292A80966E006377A1 /* Week4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Week4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6B63E2C2A80966E006377A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6B63E2E2A80966E006377A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				D69AB5102A825619007B210C /* BeerTableViewController.swift */,
 				D69AB5122A82564A007B210C /* BeerTableViewCell.swift */,
 				D69AB5132A82564A007B210C /* BeerTableViewCell.xib */,
+				D69AB5162A82999B007B210C /* beerDetailViewController.swift */,
 			);
 			path = Beer;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				D6B63E312A80966E006377A1 /* ViewController.swift in Sources */,
 				D69AB50C2A81E7C1007B210C /* VideoViewController.swift in Sources */,
 				D69AB5082A814381007B210C /* BeerRandomViewController.swift in Sources */,
+				D69AB5172A82999B007B210C /* beerDetailViewController.swift in Sources */,
 				D6B63E2D2A80966E006377A1 /* AppDelegate.swift in Sources */,
 				D69AB5062A814369007B210C /* LottoViewController.swift in Sources */,
 				D69AB50A2A81C4E5007B210C /* WeatherViewController.swift in Sources */,
