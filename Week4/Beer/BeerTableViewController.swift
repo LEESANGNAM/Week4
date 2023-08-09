@@ -11,7 +11,7 @@ import SwiftyJSON
 
 
 class BeerTableViewController: UITableViewController {
-
+    
     
     var beerList: [Beer] = []
     
@@ -54,7 +54,7 @@ class BeerTableViewController: UITableViewController {
     }
     
     
-
+    
 }
 
 
