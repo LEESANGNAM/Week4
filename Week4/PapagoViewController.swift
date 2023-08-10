@@ -17,6 +17,14 @@ class PapagoViewController: UIViewController {
     
     @IBOutlet weak var requstButton: UIButton!
     
+    let translateUrlEndPorint = "n2mt"
+    let LanguageURL = "detectLangs"
+    
+    let header: HTTPHeaders = [
+        "X-Naver-Client-Id": APIKey.naverCilentId,
+        "X-Naver-Client-Secret": APIKey.naverCilentPW
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         originalTextView.text = ""
@@ -30,19 +38,49 @@ class PapagoViewController: UIViewController {
 
     @IBAction func requestButtonTapped(_ sender: UIButton) {
         
-        let url = "https://openapi.naver.com/v1/papago/n2mt"
-        let header: HTTPHeaders = [
-            "X-Naver-Client-Id": APIKey.naverCilentId,
-            "X-Naver-Client-Secret": APIKey.naverCilentPW
-        ]
+       
+        cllRequestLanguage(endPointText: LanguageURL)
+        
+        
+       
+        
+        
+    }
+}
+
+
+extension PapagoViewController {
+   
+    func cllRequestLanguage(endPointText: String){
+        let url = "https://openapi.naver.com/v1/papago/" + endPointText
+        
         let parameters: Parameters = [
-            "source": "ko",
-            "target": "en",
+            "query": originalTextView.text ?? ""
+        ]
+        AF.request(url, method: .post,parameters: parameters, headers: header).validate().responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                print("JSON: \(json)")
+                
+                let source = json["langCode"].stringValue
+                self.callRequest(endPointText: self.translateUrlEndPorint, source: source)
+                
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
+    func callRequest(endPointText: String, source: String, target: String = "ja"){
+        let parameters: Parameters = [
+            "source": source,
+            "target": target,
             "text": originalTextView.text ?? ""
         ]
+        let url = "https://openapi.naver.com/v1/papago/" + endPointText
         
-        
-        AF.request(url, method: .post,parameters: parameters ,headers: header).validate().responseJSON { response in
+        AF.request(url, method: .post,parameters: parameters, headers: header).validate().responseJSON { response in
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
@@ -56,8 +94,5 @@ class PapagoViewController: UIViewController {
             }
         }
         
-        
     }
-    
-
 }
