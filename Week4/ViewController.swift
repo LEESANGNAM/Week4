@@ -20,6 +20,9 @@ class ViewController: UIViewController {
 
     
     @IBOutlet weak var movieTableView: UITableView!
+    @IBOutlet weak var indicatorView: UIActivityIndicatorView!
+    
+    @IBOutlet weak var searchBar: UISearchBar!
     
     var movieList: [Movie] = []
     
@@ -28,12 +31,15 @@ class ViewController: UIViewController {
         movieTableView.delegate = self
         movieTableView.dataSource = self
         movieTableView.rowHeight = 60
-        callRequest()
+        indicatorView.isHidden = true
         // Do any additional setup after loading the view.
     }
     
-    func callRequest(){
-        let url = "http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=\(APIKey.boxOfficeKey)&targetDt=20120101"
+    func callRequest(date: String){
+        indicatorView.startAnimating()
+        indicatorView.isHidden = false
+        
+        let url = "http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=\(APIKey.boxOfficeKey)&targetDt=\(date)"
         AF.request(url, method: .get).validate().responseJSON { response in
             switch response.result {
             case .success(let value):
@@ -56,9 +62,10 @@ class ViewController: UIViewController {
                 
                 
                 
-                
-                
+                self.indicatorView.stopAnimating()
+                self.indicatorView.isHidden = true
                 self.movieTableView.reloadData()
+                
             case .failure(let error):
                 print(error)
             }
@@ -67,6 +74,19 @@ class ViewController: UIViewController {
 
 
 }
+//MARK: - searchBar
+extension ViewController: UISearchBarDelegate{
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+        //20220101 > 1.8글자
+        callRequest(date: searchBar.text!)
+        
+        
+    }
+    
+    
+}
+
 
 extension ViewController : UITableViewDelegate, UITableViewDataSource{
     

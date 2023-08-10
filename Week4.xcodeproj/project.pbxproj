@@ -27,8 +27,8 @@
 		D6B63E452A8096B2006377A1 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D6B63E442A8096B2006377A1 /* SwiftyJSON */; };
 		D6B63E482A8096BC006377A1 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D6B63E472A8096BC006377A1 /* Kingfisher */; };
 		D6B63E4A2A809BA3006377A1 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = D6B63E492A809BA3006377A1 /* .gitignore */; };
-		D6B63E4C2A809C2F006377A1 /* TranslationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B63E4B2A809C2F006377A1 /* TranslationViewController.swift */; };
 		D6B63E502A809C95006377A1 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B63E4F2A809C95006377A1 /* APIKey.swift */; };
+		D6C642942A84773400DCDB89 /* PapagoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C642932A84773400DCDB89 /* PapagoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,8 +51,8 @@
 		D6B63E382A809670006377A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6B63E3A2A809670006377A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6B63E492A809BA3006377A1 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		D6B63E4B2A809C2F006377A1 /* TranslationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationViewController.swift; sourceTree = "<group>"; };
 		D6B63E4F2A809C95006377A1 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		D6C642932A84773400DCDB89 /* PapagoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PapagoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,10 +114,10 @@
 				D69AB50D2A8254BE007B210C /* Beer */,
 				D6B63E2C2A80966E006377A1 /* AppDelegate.swift */,
 				D6B63E2E2A80966E006377A1 /* SceneDelegate.swift */,
+				D6C642932A84773400DCDB89 /* PapagoViewController.swift */,
 				D6B63E302A80966E006377A1 /* ViewController.swift */,
 				D6B63E492A809BA3006377A1 /* .gitignore */,
 				D6B63E4F2A809C95006377A1 /* APIKey.swift */,
-				D6B63E4B2A809C2F006377A1 /* TranslationViewController.swift */,
 				D6B63E322A80966E006377A1 /* Main.storyboard */,
 				D69AB5092A81C4E5007B210C /* WeatherViewController.swift */,
 				D6B63E352A809670006377A1 /* Assets.xcassets */,
@@ -211,7 +211,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6B63E4C2A809C2F006377A1 /* TranslationViewController.swift in Sources */,
 				D6B63E312A80966E006377A1 /* ViewController.swift in Sources */,
 				D69AB50C2A81E7C1007B210C /* VideoViewController.swift in Sources */,
 				D69AB5082A814381007B210C /* BeerRandomViewController.swift in Sources */,
@@ -223,6 +222,7 @@
 				D69AB5282A832306007B210C /* VideoTableViewCell.swift in Sources */,
 				D69AB50F2A8254DB007B210C /* Beer.swift in Sources */,
 				D6B63E2F2A80966E006377A1 /* SceneDelegate.swift in Sources */,
+				D6C642942A84773400DCDB89 /* PapagoViewController.swift in Sources */,
 				D6B63E502A809C95006377A1 /* APIKey.swift in Sources */,
 				D69AB5112A825619007B210C /* BeerTableViewController.swift in Sources */,
 			);
