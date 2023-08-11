@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0Tp-GG-avr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Cyy-E3-Zkn">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -310,6 +310,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V30-qQ-mGH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2554.9618320610684" y="463.38028169014086"/>
+        </scene>
+        <!--Async View Controller-->
+        <scene sceneID="evx-0b-tG9">
+            <objects>
+                <viewController storyboardIdentifier="AsyncViewController" id="Cyy-E3-Zkn" customClass="AsyncViewController" customModule="Week4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ioJ-5J-fxu">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jhm-ID-PZr">
+                                <rect key="frame" x="118" y="79.000000000000014" width="157" height="157.33333333333337"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Jhm-ID-PZr" secondAttribute="height" multiplier="1:1" id="PHc-fQ-ifp"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pUz-UI-57h">
+                                <rect key="frame" x="60" y="314" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hdP-8s-N6F">
+                                <rect key="frame" x="76" y="696" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMR-mj-5OR">
+                                <rect key="frame" x="241" y="692" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="Cyy-E3-Zkn" eventType="touchUpInside" id="3nN-pI-C1P"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BAX-YL-WOn">
+                                <rect key="frame" x="60" y="481" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Xgz-M6-0sq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Jhm-ID-PZr" firstAttribute="width" secondItem="ioJ-5J-fxu" secondAttribute="width" multiplier="0.4" id="0xX-g3-YBS"/>
+                            <constraint firstItem="Jhm-ID-PZr" firstAttribute="top" secondItem="Xgz-M6-0sq" secondAttribute="top" constant="20" id="1A6-rX-J8R"/>
+                            <constraint firstItem="Jhm-ID-PZr" firstAttribute="centerX" secondItem="ioJ-5J-fxu" secondAttribute="centerX" id="Kak-ty-I1v"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="first" destination="Jhm-ID-PZr" id="T6i-ib-gaB"/>
+                        <outlet property="second" destination="pUz-UI-57h" id="2dm-dz-spL"/>
+                        <outlet property="third" destination="BAX-YL-WOn" id="cM2-5f-5T2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Kn-ge-Bae" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2803" y="1291"/>
         </scene>
         <!--Video View Controller-->
         <scene sceneID="apU-YO-dZn">

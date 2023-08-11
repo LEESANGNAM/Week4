@@ -83,6 +83,21 @@ class PapagoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        UserDefaultsHelper.standard.nickname // UserDefaults.standard.string(forKey: "nickname")
+        UserDefaultsHelper.standard.age // UserDefaults.standard.integer(forKey: "age")
+        
+        UserDefaultsHelper.standard.nickname = "칙촉"
+        UserDefaultsHelper.standard.age = 30
+        
+        UserDefaults.standard.set("고래밥", forKey: "nickname")
+        UserDefaults.standard.set(33, forKey: "age")
+        
+        UserDefaults.standard.string(forKey: "nickname")
+        UserDefaults.standard.integer(forKey: "age")
+        
+        
+        
         setUpUI()
         setupPickerView()
         // Do any additional setup after loading the view.
@@ -100,7 +115,10 @@ class PapagoViewController: UIViewController {
     
     
     @IBAction func requestButtonTapped(_ sender: UIButton) {
-        cllRequestLanguage(endPointText: LanguageURL)
+        TranslateAPIManager.shared.callRequest(text: originalTextView.text ?? "") { string in
+            self.translateTextView.text = string
+        }
+//        cllRequestLanguage(endPointText: LanguageURL)
     }
 }
 
@@ -149,7 +167,6 @@ extension PapagoViewController {
                 print(error)
             }
         }
-        
     }
 }
 // MARK: - picker
