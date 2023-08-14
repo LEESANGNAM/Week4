@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D61AAC952A8A022900F3BE4C /* BoxOfficeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61AAC942A8A022900F3BE4C /* BoxOfficeData.swift */; };
 		D645E8D42A85BA9E00A1CAD6 /* ReusableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D645E8D32A85BA9E00A1CAD6 /* ReusableViewProtocol.swift */; };
 		D645E8D62A85BD0E00A1CAD6 /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D645E8D52A85BD0E00A1CAD6 /* UserDefaultsHelper.swift */; };
 		D645E8D82A85C51800A1CAD6 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D645E8D72A85C51800A1CAD6 /* EndPoint.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D61AAC942A8A022900F3BE4C /* BoxOfficeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfficeData.swift; sourceTree = "<group>"; };
 		D645E8D32A85BA9E00A1CAD6 /* ReusableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewProtocol.swift; sourceTree = "<group>"; };
 		D645E8D52A85BD0E00A1CAD6 /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
 		D645E8D72A85C51800A1CAD6 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				D6B63E2E2A80966E006377A1 /* SceneDelegate.swift */,
 				D6C642932A84773400DCDB89 /* PapagoViewController.swift */,
 				D6B63E302A80966E006377A1 /* ViewController.swift */,
+				D61AAC942A8A022900F3BE4C /* BoxOfficeData.swift */,
 				D6B63E492A809BA3006377A1 /* .gitignore */,
 				D6B63E4F2A809C95006377A1 /* APIKey.swift */,
 				D6B63E322A80966E006377A1 /* Main.storyboard */,
@@ -239,6 +242,7 @@
 				D69AB5172A82999B007B210C /* beerDetailViewController.swift in Sources */,
 				D6B63E2D2A80966E006377A1 /* AppDelegate.swift in Sources */,
 				D645E8DC2A85C78300A1CAD6 /* KakaoAPIManager.swift in Sources */,
+				D61AAC952A8A022900F3BE4C /* BoxOfficeData.swift in Sources */,
 				D645E8DA2A85C5CA00A1CAD6 /* URL+Extension.swift in Sources */,
 				D645E8DE2A85E36000A1CAD6 /* TranslateAPIManager.swift in Sources */,
 				D645E8D82A85C51800A1CAD6 /* EndPoint.swift in Sources */,
