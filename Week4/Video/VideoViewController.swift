@@ -7,23 +7,8 @@
 
 import UIKit
 import Alamofire
-import SwiftyJSON
 import Kingfisher
 
-struct Video{
-    let author: String
-    let date: String
-    let time: Int
-    let thumbnail: String
-    let title: String
-    let link: String
-    
-    var contenString: String {
-        return "\(author)| \(time)회 \n \(date)"
-    }
-    
-    
-}
 
 
 
@@ -34,7 +19,7 @@ class VideoViewController: UIViewController {
     
     @IBOutlet weak var videoTableView: UITableView!
     
-    var videoList: [Video] = []
+    var videoList: [Document] = []
     var page = 1
     var isEnd = false // 현재 페이지가 마지막인지 점검하는 프로퍼티
     
@@ -52,48 +37,10 @@ class VideoViewController: UIViewController {
     
     func callRequest(query: String,page: Int){
         
-        KakaoAPIManager.shared.callRequest(type: .video, query: query) { json in
-            print(json)
+        KakaoAPIManager.shared.callRequest(type: .video, query: query,page: page) { json in
+            self.videoList += json.documents
+            self.videoTableView.reloadData()
         }
-        
-//        AF.request(url, method: .get,headers: header).validate(statusCode: 200...500).responseJSON { response in
-//            switch response.result {
-//            case .success(let value):
-//                let json = JSON(value)
-//                print("JSON: \(json)")
-//
-//                print(response.response?.statusCode) // 상태코드 번호
-//
-//                let statusCode = response.response?.statusCode ?? 500
-//
-//                if statusCode == 200{
-//
-//                    self.isEnd = json["meta"]["is_end"].boolValue
-//
-//                    print(self.isEnd)
-//
-//                    for item in json["documents"].arrayValue{
-//                        let title = item["title"].stringValue
-//                        let author = item["author"].stringValue
-//                        let date = item["datetime"].stringValue
-//                        let time = item["play_time"].intValue
-//                        let thumbnail = item["thumbnail"].stringValue
-//                        let link = item["url"].stringValue
-//
-//                        let data = Video(author: author, date: date, time: time, thumbnail: thumbnail, title: title, link: link)
-//
-//                        self.videoList.append(data)
-//                    }
-////                    print(self.videoList)
-//                    self.videoTableView.reloadData()
-//                }
-//                else {
-//                    print("문제가 발생했어요. 잠시 후 다시 시도해주세요!!")
-//                }
-//            case .failure(let error):
-//                print(error)
-//            }
-//        }
     }
 }
 

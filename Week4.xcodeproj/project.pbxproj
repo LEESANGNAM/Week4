@@ -15,6 +15,7 @@
 		D645E8DC2A85C78300A1CAD6 /* KakaoAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D645E8DB2A85C78300A1CAD6 /* KakaoAPIManager.swift */; };
 		D645E8DE2A85E36000A1CAD6 /* TranslateAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D645E8DD2A85E36000A1CAD6 /* TranslateAPIManager.swift */; };
 		D645E8E02A85F9ED00A1CAD6 /* AsyncViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D645E8DF2A85F9ED00A1CAD6 /* AsyncViewController.swift */; };
+		D6549F052A8D0CA80091B9E5 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6549F042A8D0CA80091B9E5 /* Video.swift */; };
 		D69AB5062A814369007B210C /* LottoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69AB5052A814369007B210C /* LottoViewController.swift */; };
 		D69AB5082A814381007B210C /* BeerRandomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69AB5072A814381007B210C /* BeerRandomViewController.swift */; };
 		D69AB50A2A81C4E5007B210C /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69AB5092A81C4E5007B210C /* WeatherViewController.swift */; };
@@ -48,6 +49,7 @@
 		D645E8DB2A85C78300A1CAD6 /* KakaoAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoAPIManager.swift; sourceTree = "<group>"; };
 		D645E8DD2A85E36000A1CAD6 /* TranslateAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateAPIManager.swift; sourceTree = "<group>"; };
 		D645E8DF2A85F9ED00A1CAD6 /* AsyncViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncViewController.swift; sourceTree = "<group>"; };
+		D6549F042A8D0CA80091B9E5 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		D69AB5052A814369007B210C /* LottoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoViewController.swift; sourceTree = "<group>"; };
 		D69AB5072A814381007B210C /* BeerRandomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerRandomViewController.swift; sourceTree = "<group>"; };
 		D69AB5092A81C4E5007B210C /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			children = (
 				D69AB50B2A81E7C1007B210C /* VideoViewController.swift */,
 				D69AB5272A832306007B210C /* VideoTableViewCell.swift */,
+				D6549F042A8D0CA80091B9E5 /* Video.swift */,
 			);
 			path = Video;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				D645E8DE2A85E36000A1CAD6 /* TranslateAPIManager.swift in Sources */,
 				D645E8D82A85C51800A1CAD6 /* EndPoint.swift in Sources */,
 				D69AB5062A814369007B210C /* LottoViewController.swift in Sources */,
+				D6549F052A8D0CA80091B9E5 /* Video.swift in Sources */,
 				D645E8D62A85BD0E00A1CAD6 /* UserDefaultsHelper.swift in Sources */,
 				D69AB50A2A81C4E5007B210C /* WeatherViewController.swift in Sources */,
 				D69AB5142A82564A007B210C /* BeerTableViewCell.swift in Sources */,
