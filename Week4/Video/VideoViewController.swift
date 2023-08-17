@@ -56,7 +56,7 @@ extension VideoViewController: UITableViewDelegate, UITableViewDataSource,UITabl
         guard let cell = tableView.dequeueReusableCell(withIdentifier: VideoTableViewCell.identifier) as? VideoTableViewCell else { return UITableViewCell() }
         
         cell.titleLabel.text = videoList[indexPath.row].title
-        cell.contentLabel.text = videoList[indexPath.row].contenString
+        cell.contentLabel.text = videoList[indexPath.row].changeFormatDateString()
         if let url = URL(string: videoList[indexPath.row].thumbnail){
             cell.thumbnailImageView.kf.setImage(with: url)
         }

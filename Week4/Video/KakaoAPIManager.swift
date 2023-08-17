@@ -23,11 +23,16 @@ class KakaoAPIManager {
         
         print(url)
         
-        AF.request(url, method: .get,headers: header).validate().responseDecodable(of:Video.self) { response in
-            guard let responseData = response.value else { return }
-            print(responseData)
-            completionHandler(responseData)
+        AF.request(url, method: .get,headers: header).validate(statusCode: 200...500).responseDecodable(of:Video.self) { response in
+            switch response.result {
+            case .success(let value):
+//                guard let responseData = response.value else { return }
+                completionHandler(value)
+            case .failure(let error):
+                print(error)
+            }
+            
         }
-    
     }
+    
 }

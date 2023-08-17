@@ -24,14 +24,23 @@ struct Document: Codable {
     let title: String
     let url: String
 
-    var contenString: String {
-            return "\(author)| \(playTime)회 \n \(datetime)"
+    func changeFormatDateString() -> String {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+            if let date = dateFormatter.date(from: datetime) {
+                dateFormatter.dateFormat = "yyyy-MM-dd"
+                let changeFormatDate = dateFormatter.string(from: date)
+                return "\(author) | \(playTime)회\n\(changeFormatDate)"
+            } else {
+                return "\(author) | \(playTime)회\n\(datetime)"
+            }
         }
     enum CodingKeys: String, CodingKey {
         case author, datetime
         case playTime = "play_time"
         case thumbnail, title, url
     }
+    
 }
 
 enum Author: String, Codable {

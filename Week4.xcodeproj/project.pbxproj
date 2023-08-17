@@ -103,6 +103,7 @@
 		D69AB5292A83230D007B210C /* Video */ = {
 			isa = PBXGroup;
 			children = (
+				D645E8DB2A85C78300A1CAD6 /* KakaoAPIManager.swift */,
 				D69AB50B2A81E7C1007B210C /* VideoViewController.swift */,
 				D69AB5272A832306007B210C /* VideoTableViewCell.swift */,
 				D6549F042A8D0CA80091B9E5 /* Video.swift */,
@@ -149,7 +150,6 @@
 				D645E8D52A85BD0E00A1CAD6 /* UserDefaultsHelper.swift */,
 				D645E8D72A85C51800A1CAD6 /* EndPoint.swift */,
 				D645E8D92A85C5CA00A1CAD6 /* URL+Extension.swift */,
-				D645E8DB2A85C78300A1CAD6 /* KakaoAPIManager.swift */,
 				D645E8DD2A85E36000A1CAD6 /* TranslateAPIManager.swift */,
 			);
 			path = Week4;
